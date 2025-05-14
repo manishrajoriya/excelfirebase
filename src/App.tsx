@@ -4,8 +4,6 @@ import { auth } from './firebase/config';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import Auth from './components/Auth';
 import Sidebar from './components/Sidebar';
-import Dashboard from './components/Dashboard';
-import UserProfile from './components/UserProfile';
 import UploadPage from './components/UploadPage';
 import './App.css';
 
@@ -42,8 +40,8 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/profile" element={<UserProfile />} />
+            {/* <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<UserProfile />} /> */}
             <Route path="/files" element={<UploadPage />} />
             <Route path="/settings" element={<div className="content-section">Settings section coming soon...</div>} />
           </Routes>

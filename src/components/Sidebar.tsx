@@ -19,7 +19,7 @@ const Sidebar: FC<SidebarProps> = ({ userEmail, onSignOut }) => {
       
       <nav className="sidebar-nav">
         <ul>
-          <li>
+          {/* <li>
             <Link 
               to="/dashboard"
               className={location.pathname === '/dashboard' ? 'active' : ''}
@@ -27,8 +27,8 @@ const Sidebar: FC<SidebarProps> = ({ userEmail, onSignOut }) => {
               <span className="icon">📊</span>
               Dashboard
             </Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link 
               to="/U"
               className={location.pathname === '/profile' ? 'active' : ''}
@@ -36,7 +36,7 @@ const Sidebar: FC<SidebarProps> = ({ userEmail, onSignOut }) => {
               <span className="icon">👤</span>
               Profile
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link 
               to="/files"
