@@ -30,7 +30,7 @@ const Sidebar: FC<SidebarProps> = ({ userEmail, onSignOut }) => {
           </li>
           <li>
             <Link 
-              to="/profile"
+              to="/U"
               className={location.pathname === '/profile' ? 'active' : ''}
             >
               <span className="icon">👤</span>

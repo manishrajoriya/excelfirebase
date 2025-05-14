@@ -6,6 +6,7 @@ import Auth from './components/Auth';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import UserProfile from './components/UserProfile';
+import UploadPage from './components/UploadPage';
 import './App.css';
 
 function App() {
@@ -43,7 +44,7 @@ function App() {
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/profile" element={<UserProfile />} />
-            <Route path="/files" element={<div className="content-section">Files section coming soon...</div>} />
+            <Route path="/files" element={<UploadPage />} />
             <Route path="/settings" element={<div className="content-section">Settings section coming soon...</div>} />
           </Routes>
         </main>
