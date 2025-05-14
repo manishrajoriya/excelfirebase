@@ -1,4 +1,5 @@
-import { FC } from 'react';
+import type { FC } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
 
 interface SidebarProps {
@@ -7,6 +8,8 @@ interface SidebarProps {
 }
 
 const Sidebar: FC<SidebarProps> = ({ userEmail, onSignOut }) => {
+  const location = useLocation();
+
   return (
     <div className="sidebar">
       <div className="sidebar-header">
@@ -17,22 +20,40 @@ const Sidebar: FC<SidebarProps> = ({ userEmail, onSignOut }) => {
       <nav className="sidebar-nav">
         <ul>
           <li>
-            <a href="#" className="active">
+            <Link 
+              to="/dashboard"
+              className={location.pathname === '/dashboard' ? 'active' : ''}
+            >
               <span className="icon">📊</span>
               Dashboard
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link 
+              to="/profile"
+              className={location.pathname === '/profile' ? 'active' : ''}
+            >
+              <span className="icon">👤</span>
+              Profile
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/files"
+              className={location.pathname === '/files' ? 'active' : ''}
+            >
               <span className="icon">📁</span>
               Files
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link 
+              to="/settings"
+              className={location.pathname === '/settings' ? 'active' : ''}
+            >
               <span className="icon">⚙️</span>
               Settings
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

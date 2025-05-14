@@ -3,16 +3,18 @@
   height: 100vh;
   background-color: #2c3e50;
   color: white;
-  display: flex;
-  flex-direction: column;
   position: fixed;
   left: 0;
   top: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 .sidebar-header {
-  padding: 1.5rem;
+  padding: 1rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
 }
 
 .sidebar-header h3 {
@@ -22,14 +24,13 @@
 }
 
 .user-email {
-  margin: 0.5rem 0 0;
   font-size: 0.9rem;
   color: #95a5a6;
+  margin-top: 0.5rem;
 }
 
 .sidebar-nav {
   flex: 1;
-  padding: 1rem 0;
 }
 
 .sidebar-nav ul {
@@ -39,15 +40,16 @@
 }
 
 .sidebar-nav li {
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
 }
 
 .sidebar-nav a {
   display: flex;
   align-items: center;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1rem;
   color: #ecf0f1;
   text-decoration: none;
+  border-radius: 4px;
   transition: background-color 0.2s;
 }
 
@@ -66,26 +68,32 @@
 }
 
 .sidebar-footer {
-  padding: 1rem 1.5rem;
+  padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sign-out-btn {
   width: 100%;
   padding: 0.75rem;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ecf0f1;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s;
+  transition: background-color 0.2s;
 }
 
 .sign-out-btn:hover {
-  background-color: rgba(231, 76, 60, 0.1);
-  border-color: #e74c3c;
-  color: #e74c3c;
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
 } 

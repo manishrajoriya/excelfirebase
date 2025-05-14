@@ -42,18 +42,30 @@
 }
 
 .app {
-  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  padding: 1rem;
+  min-height: 100vh;
+  background-color: #f5f5f5;
 }
 
-.app-authenticated {
-  min-height: 100vh;
-  display: flex;
-  background-color: #f5f7fa;
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 250px; /* Width of the sidebar */
+  overflow-y: auto;
+}
+
+.content-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
 }
 
 /* Remove default styles */
